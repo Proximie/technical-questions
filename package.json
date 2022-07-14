@@ -1,0 +1,31 @@
+{
+  "name": "technical-questions",
+  "version": "1.0.0",
+  "description": "Technical Questions",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^28.1.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:reverse-string": "jest reverse-string.spec.ts",
+    "test:pascals-triangle": "jest pascals-triangle.spec.ts",
+    "test:etl": "jest etl.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Proximie/technical-questions.git"
+  },
+  "author": "Connor Smallman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Proximie/technical-questions/issues"
+  },
+  "homepage": "https://github.com/Proximie/technical-questions#readme"
+}
