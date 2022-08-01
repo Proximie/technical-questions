@@ -31,7 +31,7 @@ describe('Flatten array', () => {
     expect(actual).toEqual(expected);
   });
 
-  it('flatten an string array with several levels of nested arrays and falsy values', () => {
+  it('flatten a string array with several levels of nested arrays and falsy values', () => {
     const expected = [
       'apple',
       'orange',
@@ -50,5 +50,61 @@ describe('Flatten array', () => {
       ['lemon', undefined, ['mandarin', ['grapes', 'mango']]],
       [[undefined]],
     ]);
+    expect(actual).toEqual(expected);
+  });
+
+  it('flatten an object array with several levels of nested arrays and falsy values', () => {
+    const expected = [
+      { name: 'square', corners: 4 },
+      { name: 'circle', corners: 0 },
+      { name: 'triangle', corners: 3 },
+      { name: 'rectangle', corners: 4 },
+      { name: 'ellipse', corners: 0 },
+      { name: 'hexagon', corners: 6 },
+      {},
+      { name: 'pentagon', corners: 5 },
+    ];
+    const actual = execute([
+      { name: 'square', corners: 4 },
+      [
+        [
+          { name: 'circle', corners: 0 },
+          { name: 'triangle', corners: 3 },
+        ],
+      ],
+      [
+        { name: 'rectangle', corners: 4 },
+        null,
+        [
+          { name: 'ellipse', corners: 0 },
+          [
+            { name: 'hexagon', corners: 6 },
+            {},
+            [{ name: 'pentagon', corners: 5 }],
+          ],
+        ],
+      ],
+    ]);
+    expect(actual).toEqual(expected);
+  });
+
+  it('flatten a mixed types array with several levels of nested arrays and falsy values', () => {
+    const expected = [
+      { name: 'square', corners: 4 },
+      43,
+      { name: 'triangle', corners: 3 },
+      'lemon',
+      'orange',
+      { name: 'hexagon', corners: 6 },
+      56,
+      {},
+    ];
+    const actual = execute([
+      { name: 'square', corners: 4 },
+      null,
+      [[43, { name: 'triangle', corners: 3 }, undefined, 0]],
+      ['lemon', ['orange', [{ name: 'hexagon', corners: 6 }, '', [56, {}]]]],
+    ]);
+    expect(actual).toEqual(expected);
   });
 });
