@@ -16,7 +16,8 @@
     "test": "jest",
     "test:reverse-string": "jest reverse-string.spec.ts",
     "test:pascals-triangle": "jest pascals-triangle.spec.ts",
-    "test:etl": "jest etl.spec.ts"
+    "test:etl": "jest etl.spec.ts",
+    "test:flatten-array": "jest flatten-array.spec.ts"
   },
   "repository": {
     "type": "git",
