@@ -14,10 +14,11 @@
   },
   "scripts": {
     "test": "jest",
-    "test:reverse-string": "jest reverse-string.spec.ts",
-    "test:pascals-triangle": "jest pascals-triangle.spec.ts",
     "test:etl": "jest etl.spec.ts",
-    "test:flatten-array": "jest flatten-array.spec.ts"
+    "test:flatten-array": "jest flatten-array.spec.ts",
+    "test:reverse-string": "jest reverse-string.spec.ts",
+    "test:parse-brackets": "jest parse-brackets.spec.ts",
+    "test:pascals-triangle": "jest pascals-triangle.spec.ts"
   },
   "repository": {
     "type": "git",
