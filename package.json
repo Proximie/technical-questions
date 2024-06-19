@@ -15,6 +15,7 @@
   "scripts": {
     "test": "jest",
     "test:binary-search": "jest binary-search.spec.ts",
+    "test:capitalise-words": "jest capitalise-words.spec.ts",
     "test:etl": "jest etl.spec.ts",
     "test:flatten-array": "jest flatten-array.spec.ts",
     "test:reverse-string": "jest reverse-string.spec.ts",
