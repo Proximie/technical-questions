@@ -14,6 +14,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:arraySum": "jest arraySum.spec.ts",
     "test:binary-search": "jest binary-search.spec.ts",
     "test:capitalise-words": "jest capitalise-words.spec.ts",
     "test:etl": "jest etl.spec.ts",
